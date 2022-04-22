@@ -6,8 +6,6 @@ class FilterNonPositive: public FilterGeneric {
     
     public:
     FilterNonPositive();
-    
-    private:
     bool g(int x);
 };
 #endif

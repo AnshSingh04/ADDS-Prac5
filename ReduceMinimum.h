@@ -6,8 +6,6 @@ class ReduceMinimum: public ReduceGeneric {
     
     public:
     ReduceMinimum();
-    
-    private:
     int binaryOperator(int x, int y);
 };
 #endif

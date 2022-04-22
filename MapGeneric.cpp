@@ -12,10 +12,10 @@ int MapGeneric::f(int x) {
 vector<int> MapGeneric::map(vector<int> x) {
     static int counter = 0;
     static vector<int> result;
-    if(counter == x.size()-1) {
+    if(counter == x.size()) {
         return result;
     }
-    result.push_back(f(x[counter]));
+    result.push_back(f(x.at(counter)));
     counter++;
     map(x);
     return result;

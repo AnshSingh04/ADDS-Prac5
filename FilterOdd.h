@@ -6,8 +6,6 @@ class FilterOdd: public FilterGeneric {
     
     public:
     FilterOdd();
-    
-    private:
     bool g(int x);
 };
 #endif

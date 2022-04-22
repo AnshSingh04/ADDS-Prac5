@@ -6,8 +6,6 @@ class MapSquare: public MapGeneric {
     
     public:
     MapSquare();
-    
-    private:
     int f(int x);
 };
 #endif

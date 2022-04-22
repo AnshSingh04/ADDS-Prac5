@@ -6,8 +6,6 @@ class MapAbsoluteValue: public MapGeneric {
     
     public:
     MapAbsoluteValue();
-    
-    private:
     int f(int x);
 };
 #endif

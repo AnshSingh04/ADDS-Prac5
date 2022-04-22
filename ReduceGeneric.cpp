@@ -10,21 +10,11 @@ int ReduceGeneric::binaryOperator(int x,int y) {
 }
 
 int ReduceGeneric::reduce(vector<int> x) {
-    static vector<int>::iterator i=x.begin();
-    static int result;
-    if (i==x.begin()) {
-        result=binaryOperator(*x.begin(),*i);
-        i++;
-        return reduce(x);
-    } 
-    else if (i==x.end()) {
-        return result;
-    }   
-    else {
-        result=binaryOperator(result,*i);
-        i++;
-        return reduce(x);
+    if(x.size()-2 == 0) {
+        return binaryOperator(x.at(0), x.at(1));
     }
-    return result;
-    
+    int result = binaryOperator(x.at(0), x.at(1));
+    x.erase(x.begin());
+    x.front() = result;
+    return reduce(x);
 }

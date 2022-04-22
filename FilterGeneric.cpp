@@ -15,9 +15,9 @@ vector<int> FilterGeneric::filter(vector<int> x) {
     if(counter == x.size()-1) {
         return result;
     }
-    bool ans = g(x[counter]);
+    bool ans = g(x.at(counter));
     if(ans == false) {
-        result.push_back(x[counter]);
+        result.push_back(x.at(counter));
     }
     counter++;
     filter(x);
