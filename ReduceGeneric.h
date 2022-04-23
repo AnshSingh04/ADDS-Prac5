@@ -6,7 +6,7 @@ using namespace std;
 class ReduceGeneric {
     
     private:
-    int binaryOperator(int x, int y);
+    virtual int binaryOperator(int x, int y);
 
     public:
     ReduceGeneric();

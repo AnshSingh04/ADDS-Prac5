@@ -6,6 +6,7 @@ ReduceGeneric::ReduceGeneric() {
 }
 
 int ReduceGeneric::binaryOperator(int x,int y) {
+    cout<<"Wrong class"<<endl;
     return x;
 }
 

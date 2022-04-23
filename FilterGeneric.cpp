@@ -2,6 +2,9 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+int counter2 = 0;
+vector<int> result2;
+vector<int> temp2;
 FilterGeneric::FilterGeneric() {
 }
 
@@ -10,16 +13,18 @@ bool FilterGeneric::g(int x) {
 }
 
 vector<int> FilterGeneric::filter(vector<int> x) {
-    static int counter = 0;
-    static vector<int> result;
-    if(counter == x.size()-1) {
-        return result;
+    
+    if(counter2 == x.size()-1) {
+        return result2;
     }
-    bool ans = g(x.at(counter));
+    bool ans = g(x.at(counter2));
     if(ans == false) {
-        result.push_back(x.at(counter));
+        result2.push_back(x.at(counter2));
     }
-    counter++;
+    counter2++;
     filter(x);
-    return result;
+    copy(result2.begin(), result2.end(), back_inserter(temp2));
+    counter2 = 0;
+    result2.clear();
+    return temp2;
 }
