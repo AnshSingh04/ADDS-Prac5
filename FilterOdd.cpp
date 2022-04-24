@@ -5,8 +5,8 @@ FilterOdd::FilterOdd() {
 }
 
 bool FilterOdd::g(int x) {
-   if(x%2 != 0) {
-       return true;
+   if(x%2 == 0) {
+       return false;
    }
-   return false; 
+   return true; 
 }

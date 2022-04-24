@@ -13,12 +13,12 @@ bool FilterGeneric::g(int x) {
 }
 
 vector<int> FilterGeneric::filter(vector<int> x) {
-    
-    if(counter2 == x.size()-1) {
+    temp2.clear();
+    if(counter2 == x.size()) {
         return result2;
     }
     bool ans = g(x.at(counter2));
-    if(ans == false) {
+    if(ans == true) {
         result2.push_back(x.at(counter2));
     }
     counter2++;
